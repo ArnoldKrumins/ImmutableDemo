@@ -17,7 +17,8 @@ var app = (function(){
         {name:'Arnold', age:48, nationality:'British', sex:'m'},
         {name:'Anna', age:1, nationality:'Swedish', sex:'f'},
         {name:'Alice', age:3, nationality:'Swedish', sex:'f'},
-        {name:'Zoe', age:40, nationality:'English', sex:'f'}
+        {name:'Zoe', age:40, nationality:'English', sex:'f'},
+        {name:'Zack', age:20, nationality:'American', sex:'m'}
     ];
 
 
@@ -40,10 +41,21 @@ var app = (function(){
 
     };
 
+    subtract = function(){
+
+        var result =  map3.toSet().subtract(map4.toSet()).toList().toJS();
+        console.log(map3.toJS());
+        console.log(map4.toJS());
+        console.log(result);
+
+    };
+
+
     return{
 
         test:test,
-        merge:merge
+        merge:merge,
+        subtract:subtract
 
     };
 

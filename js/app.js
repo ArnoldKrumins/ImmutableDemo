@@ -48,14 +48,29 @@ var app = (function(){
         console.log(map4.toJS());
         console.log(result);
 
+
     };
 
+    isEqual = function(){
+
+        return map3 === map4;
+
+    };
+
+    filter = function(){
+
+        return map3.filter(function(obj){
+             return obj.name === 'Arnold';
+        }).toJS();
+    };
 
     return{
 
         test:test,
         merge:merge,
-        subtract:subtract
+        subtract:subtract,
+        isEqual:isEqual,
+        filter:filter
 
     };
 
